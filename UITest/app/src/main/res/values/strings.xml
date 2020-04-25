@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">UITest</string>
+
+    <string name="simple_adapter">ListView的用法</string>
+    <string name="custom_dialog">自定义布局的AlertDialog</string>
+    <string name="xml_menu">XML定义菜单</string>
+    <string name="action_context">ActionMode的上下文菜单</string>
+
+    <string name="dialog_list">自定义对话框</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+
+    <string name="menu_Font">字体大小</string>
+    <string name="menu_Normal">普通菜单项</string>
+    <string name="menu_Color">字体颜色</string>
+    <string name="font_small">小号</string>
+    <string name="font_medium">中号</string>
+    <string name="font_big">大号</string>
+    <string name="color_red">红色</string>
+    <string name="color_black">黑色</string>
+    <string name="test_text">用于测试的内容</string>
+</resources>

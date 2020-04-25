@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+<item android:title="@string/menu_Font">
+    <menu>
+        <!-- 定义一组单选菜单项 -->
+        <group  android:checkableBehavior="single">
+            <!-- 定义多个菜单项 -->
+            <item android:id="@+id/font_10" android:title="@string/font_small"/>
+            <item android:id="@+id/font_16" android:title="@string/font_medium"/>
+            <item android:id="@+id/font_20" android:title="@string/font_big"/>
+        </group>
+    </menu>
+</item>
+
+<!-- 定义一个普通菜单项 -->
+<item
+    android:id="@+id/normal"
+    android:title="@string/menu_Normal">
+</item>
+
+<item android:title="@string/menu_Color">
+    <menu>
+        <item
+            android:id="@+id/color_red"
+            android:title="@string/color_red" />
+        <item
+            android:id="@+id/color_black"
+            android:title="@string/color_black"/>
+    </menu>
+</item>
+</menu>
