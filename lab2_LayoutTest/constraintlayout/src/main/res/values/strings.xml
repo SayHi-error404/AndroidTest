@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ConstraintLayout</string>
+    <string name="RED">RED</string>
+    <string name="ORANGE">ORANGE</string>
+    <string name="YELLOW">YELLOW</string>
+    <string name="GREEN">GREEN</string>
+    <string name="BLUE">BLUE</string>
+    <string name="INDIGO">INDIGO</string>
+    <string name="VIOLET">VIOLET</string>
+</resources>

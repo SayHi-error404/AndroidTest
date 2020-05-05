@@ -1,0 +1,2 @@
+include ':app', ':linearlayout', ':constraintlayout', ':tablelayout'
+rootProject.name='LayoutTest'

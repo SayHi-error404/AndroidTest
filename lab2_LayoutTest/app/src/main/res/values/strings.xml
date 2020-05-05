@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LayoutTest</string>
+    <string name="to">LayoutTest1</string>
+    <string name="subject">LayoutTest2</string>
+    <string name="message">LayoutTest3</string>
+    <string name="send">LayoutTest4</string>
+</resources>
