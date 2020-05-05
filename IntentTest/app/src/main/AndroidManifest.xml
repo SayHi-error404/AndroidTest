@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.intenttest">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"><!-- 信任未加密流量 -->
+
+        <activity android:name=".MyBrowser">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" /><!--过滤ACTION_VIEW操作-->
+                <category android:name="android.intent.category.DEFAULT" /><!--过滤类别-->
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!--目标 Activity 允许本身通过网络浏览器启动，以显示链接引用的数据，如图像或电子邮件。不加也行，但是会出现红线-->
+                <data android:scheme="http" /><!--过滤http协议数据-->
+                <data android:scheme="https" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+    <!-- 添加网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+</manifest>

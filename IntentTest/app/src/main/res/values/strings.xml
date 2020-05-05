@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">IntentTest</string>
+
+    <string name="url">请输入URL网址</string>
+    <string name="url_button">浏览该网页</string>
+    <!-- <string name="baidu">www.baidu.com</string> -->
+    <string name="baidu">https://www.baidu.com/</string>
+    <string name="PS">输入框中应填入完整url，如：“https://www.baidu.com/”，直接输入“www.baidu.com”会出错</string>
+</resources>
