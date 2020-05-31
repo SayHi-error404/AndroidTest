@@ -125,7 +125,8 @@ android:icon="@android:drawable/ic_menu_search"
 或
 android:icon="@android:drawable/ic_search_category_default"
 ```
-也可使用从网上下载的图片，在我的代码中使用的是网上下载的图片，将图片名称修改`ic_menu_search`，并放入**drawable**文件下，图片可从阿里矢量图标库[https://www.iconfont.cn/](https://www.iconfont.cn/)处下载。	
+也可使用从网上下载的图片，在我的代码中使用的是网上下载的图片，将图片名称修改`ic_menu_search`，并放入**drawable**文件下，图片可从阿里矢量图标库[https://www.iconfont.cn/](https://www.iconfont.cn/)处下载。
+
 **实现效果截图：**
 
 <img src="https://github.com/SayHi-error404/AndroidTest/blob/master/NotePad-master/ScreenShots/img3.png" alt="img3"/>
@@ -294,7 +295,7 @@ public class NoteSearch extends ListActivity implements SearchView.OnQueryTextLi
 ```
 大体上和**NoteList**相同，保留`onListItemClick`对文本选择的反应，继承了**ListActivity**，实现**SearchView**的`OnQueryTextListener`监听接口，实现模糊查询，在此处原本是打算使用`searchview.setOnQueryTextListener(new SearchView.OnQueryTextListener(){});`这种方式注册监听的，但是在实现这个接口的过程中`SimpleCursorAdapter `下的**context无法使用this**，不知是何原因，尚未解决。因此查询了百度和询问他人，最终改为实现这个接口，重写它的方法后在`OnCreate`中启动监听。
 
-**实验效果截图：**
+**实现效果截图：**
 
 <img src="https://github.com/SayHi-error404/AndroidTest/blob/master/NotePad-master/ScreenShots/img5.png" width="500" height="750" alt="img5"/>
 
