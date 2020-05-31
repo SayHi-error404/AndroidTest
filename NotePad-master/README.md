@@ -125,12 +125,10 @@ android:icon="@android:drawable/ic_menu_search"
 或
 android:icon="@android:drawable/ic_search_category_default"
 ```
-也可使用从网上下载的图片，在我的代码中使用的是网上下载的图片，将图片名称修改`ic_menu_search`，并放入**drawable**文件下，图片可从阿里矢量图标库[https://www.iconfont.cn/](https://www.iconfont.cn/)处下载。
+也可使用从网上下载的图片，在我的代码中使用的是网上下载的图片，将图片名称修改`ic_menu_search`，并放入**drawable**文件下，图片可从阿里矢量图标库[https://www.iconfont.cn/](https://www.iconfont.cn/)处下载。	
 **实现效果截图：**
 
-![img3](
-https://github.com/SayHi-error404/AndroidTest/blob/master/NotePad-master/ScreenShots/img3.png )	
-
+<img src="https://github.com/SayHi-error404/AndroidTest/blob/master/NotePad-master/ScreenShots/img3.png" alt="img3"/>
 
 添加完了按钮，接下来新建一个Activity，取名为**NoteSearch**，新建的同时Android Studio会自动生成一个名为activity_note_search的布局文件，此处为了规范文件我修改为其名字为**note_search**（可改可不改）。首先先实现布局文件，给其添加`constraintlayout`布局以及`SearchView`搜索框组件和`ListView`列表组件，如下：
 ```xml
