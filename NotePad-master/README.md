@@ -1,8 +1,6 @@
 # NotePad
 This is an AndroidStudio rebuild of google SDK sample NotePad
 
-@[TOC](期中实验NotePad简单拓展)
-
 # 期中实验拓展要求
  1. NoteList中显示条目增加时间戳显示
  2. 添加笔记查询功能（根据标题查询）
@@ -72,7 +70,8 @@ SimpleCursorAdapter adapter
 );
 ```
 这样时间戳的显示就完成了，但是出现了一个问题，在源代码中，获得的是当前时间的时间戳，如1590576894896
-![img1]()
+![img1](
+https://github.com/SayHi-error404/AndroidTest/blob/master/NotePad-master/ScreenShots/img1.png)	
 该时间为格林威治时间1970年01月01日00时00分00秒起至当下的总秒数，但是在本次实验拓展，希望实现类似于2020-05-29 05:31:13这样的时间，可是经过多次修改和寻找，最终还是不知道怎样在查询时修改显示的时间数据，于是改为**在添加时改变添加时间的格式**和**在修改时改变修改时间的格式**。
 
 首先打开**NotePadProvider**文件找到`insert`方法，找到该方法中的`now`常量，对其进行修改：
@@ -88,7 +87,8 @@ SimpleDateFormat sdf= new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 String now = sdf.format(date);
 ```
 **实现效果截图：**
-![img2]()
+![img2](
+https://github.com/SayHi-error404/AndroidTest/blob/master/NotePad-master/ScreenShots/img2.png)
 
 ## 添加笔记查询功能（根据标题查询）
 首先在主界面为搜索添加一个菜单按钮，打开**list_options_menu**文件，为其添加一个search的`item`：
@@ -126,7 +126,8 @@ android:icon="@android:drawable/ic_search_category_default"
 ```
 也可使用从网上下载的图片，在我的代码中使用的是网上下载的图片，将图片名称修改`ic_menu_search`，并放入**drawable**文件下，图片可从阿里矢量图标库[https://www.iconfont.cn/](https://www.iconfont.cn/)处下载。
 **实现效果截图：**
-![img3]()
+![img3](
+https://github.com/SayHi-error404/AndroidTest/blob/master/NotePad-master/ScreenShots/img3.png)
 
 添加完了按钮，接下来新建一个Activity，取名为**NoteSearch**，新建的同时Android Studio会自动生成一个名为activity_note_search的布局文件，此处为了规范文件我修改为其名字为**note_search**（可改可不改）。首先先实现布局文件，给其添加`constraintlayout`布局以及`SearchView`搜索框组件和`ListView`列表组件，如下：
 ```xml
@@ -167,7 +168,9 @@ case R.id.menu_search:
 	return true;
 ```
 **实现效果截图：**
-![img4]()
+![img4](
+https://github.com/SayHi-error404/AndroidTest/blob/master/NotePad-master/ScreenShots/img4.png)
+
 最终对**NoteSearch**文件进行修改，完成查询功能，此处模仿**NoteList**文件：
 ```java
 package com.example.android.notepad;
@@ -291,4 +294,7 @@ public class NoteSearch extends ListActivity implements SearchView.OnQueryTextLi
 大体上和**NoteList**相同，保留`onListItemClick`对文本选择的反应，继承了**ListActivity**，实现**SearchView**的`OnQueryTextListener`监听接口，实现模糊查询，在此处原本是打算使用`searchview.setOnQueryTextListener(new SearchView.OnQueryTextListener(){});`这种方式注册监听的，但是在实现这个接口的过程中`SimpleCursorAdapter `下的**context无法使用this**，不知是何原因，尚未解决。因此查询了百度和询问他人，最终改为实现这个接口，重写它的方法后在`OnCreate`中启动监听。
 
 **实验效果截图：**
-![img5]()
+![img5](
+https://github.com/SayHi-error404/AndroidTest/blob/master/NotePad-master/ScreenShots/img5.png)
+
+至此，期中实验结束。
