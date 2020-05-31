@@ -5,4 +5,4 @@ This is an AndroidStudio rebuild of google SDK sample NotePad
 1.NoteList中显示条目增加时间戳显示  
 2.添加笔记查询功能（根据标题查询）  
 
-![Alt](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9hdmF0YXIuY3Nkbi5uZXQvNy83L0IvMV9yYWxmX2h4MTYzY29tLmpwZw)
+![img1](https://github.com/SayHi-error404/AndroidTest/blob/master/NotePad-master/ScreenShots/img1.png)
